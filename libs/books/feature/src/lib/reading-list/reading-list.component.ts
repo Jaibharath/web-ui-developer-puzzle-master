@@ -39,7 +39,6 @@ export class ReadingListComponent {
     const snackBarRef = this.snackBar.open(msg, 'Undo');
 
     snackBarRef.onAction().subscribe(() => {
-      console.log('Undo');
       func(data);
     });
   }
