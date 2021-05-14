@@ -47,12 +47,12 @@ export class BookSearchComponent implements OnInit {
     this.store.dispatch(addToReadingList({ book }));
   }
 
-  searchExample() {
+  searchExample = () => {
     this.searchForm.controls.term.setValue('javascript');
     this.searchBooks();
   }
 
-  searchBooks() {
+  searchBooks = () => {
     if (this.searchForm.value.term) {
       this.store.dispatch(searchBooks({ term: this.searchTerm }));
     } else {
